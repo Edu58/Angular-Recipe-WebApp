@@ -1,0 +1,21 @@
+.container {
+    min-height: 95vh;
+    margin-top: 2rem;
+}
+
+.summary{
+    margin-right: 1rem;
+    max-height: 30rem;
+    max-width: 30%;
+}
+
+.summary img {
+    min-height: 15rem;
+    width: auto;
+}
+
+.recipe {
+    max-width: 70%;
+    max-height: 30rem;
+    overflow-y: scroll;
+}

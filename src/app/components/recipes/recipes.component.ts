@@ -17,7 +17,6 @@ export class RecipesComponent implements OnInit {
     this.getrecipe.callRecipes()
       .subscribe(
         recipe => {
-          console.log(recipe)
           this.recipe = recipe
         }
     )
@@ -27,7 +26,6 @@ export class RecipesComponent implements OnInit {
     this.getrecipe.callRecipes()
       .subscribe(
         recipe => {
-          console.log(recipe)
           this.recipe = recipe
         })
   }

@@ -1,0 +1,7 @@
+.contact {
+    min-height: 95vh;
+}
+
+.contact textarea {
+    height: 10rem;
+}

@@ -8,7 +8,7 @@ import { GetsearchService } from 'src/app/services/getsearch.service';
 })
 export class SearchComponent implements OnInit {
   userInput: any;
-  data: any;
+  data: any = []
 
   constructor(private searchUserInput: GetsearchService, private response: GetsearchService) { }
 
@@ -17,9 +17,8 @@ export class SearchComponent implements OnInit {
 
   searchInput() {
     this.response.getResponse(this.userInput).subscribe(
-      data => {
-        this.data.meals = data
-        console.log(data)
+      result => {
+        this.data = result.meals
       }
     )
   }

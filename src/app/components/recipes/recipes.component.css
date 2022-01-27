@@ -10,7 +10,7 @@
 }
 
 .random-recipe .summary img {
-    min-height: 15rem;
+    max-height: 15rem;
     width: auto;
 }
 

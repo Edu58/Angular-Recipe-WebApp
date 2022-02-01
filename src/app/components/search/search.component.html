@@ -14,22 +14,9 @@
             <div class="card-body">
                 <h5>Meal: {{meal.strMeal}}</h5>
                 <h6>Origin: {{meal.strArea}}</h6>
-                <h6>Category: {{meal.strCategory}}</h6>
+                <h6>Category: {{meal.strCategory}} | {{meal.idMeal}}</h6>
                 <div class="d-flex justify-content-center" style="margin-top: 1rem;">
-                    <a [href]="meal.strYoutube" class="btn btn-md btn-success w-75">Check Recipe</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-center" #NoData>
-            <div class="card">
-                <div class="card-header fs-2 fw-bold text-danger text-center">
-                    No Data
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                    <p>search for a meal using the search bar above 👆</p>
-                    </blockquote>
+                    <button mat-flat-button color="primary">Check Recipe</button>
                 </div>
             </div>
         </div>

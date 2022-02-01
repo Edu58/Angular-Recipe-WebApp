@@ -14,6 +14,8 @@ import { GetrecipesService } from './services/getrecipes.service';
 import { ContactComponent } from './components/contact/contact.component';
 import { SearchComponent } from './components/search/search.component';
 import { GetsearchService } from './services/getsearch.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { GetsearchService } from './services/getsearch.service';
     AboutComponent,
     RecipesComponent,
     ContactComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [GetrecipesService, GetsearchService],
   bootstrap: [AppComponent]

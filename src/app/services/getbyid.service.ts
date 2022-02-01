@@ -4,11 +4,12 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class GetsearchService {
+export class GetbyidService {
 
   constructor(private http: HttpClient) { }
 
-  getResponse(input: string) {
-    return this.http.get<any>(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
+
+  getById(id: any) {
+    return this.http.get<any>(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
   }
 }

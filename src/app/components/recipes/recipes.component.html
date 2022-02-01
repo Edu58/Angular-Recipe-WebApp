@@ -1,5 +1,5 @@
-<section class="container d-flex justify-content-around">
-    <div class="summary">
+<section class="container d-flex justify-content-around" *ngIf="recipe">
+    <div class="summary mx-2">
       <div class="card">
         <img [src]="recipe.meals[0].strMealThumb" class="card-img-top p-2 rounded">
         <div class="card-body text-center">
@@ -10,7 +10,7 @@
       </div>
 
       <div class="refresh-div my-3">
-        <button class="btn btn-lg bg-success w-100 text-light" (click)="getRandomRecipe()">Get Random Recipe</button>
+        <button class="btn btn-lg bg-success w-100 text-light" (click)="getRandomRecipe()">Next Recipe</button>
       </div>
     </div>
 
@@ -20,9 +20,11 @@
           <h5 class="card-title fw-bolder">Recipe</h5>
         </div>
         <p class="card-text lh-base">{{recipe.meals[0].strInstructions}}</p>
-        <div class="d-flex justify-content-center my-2">
-          <a class="btn btn-danger text-light w-50" [href]="recipe.meals[0].strYoutube" target="_blank">Video</a>
-        </div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center my-2">
+        <a class="btn btn-danger text-light w-50" [href]="recipe.meals[0].strYoutube" target="_blank">Video</a>
       </div>
     </div>
+
 </section>

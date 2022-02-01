@@ -3,14 +3,14 @@
     margin-top: 2rem;
 }
 
-.summary{
+.random-recipe{
     margin-right: 1rem;
     max-height: 30rem;
     max-width: 30%;
 }
 
-.summary img {
-    min-height: 15rem;
+.random-recipe .summary img {
+    max-height: 15rem;
     width: auto;
 }
 

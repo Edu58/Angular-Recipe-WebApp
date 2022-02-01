@@ -1,4 +1,3 @@
-import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { GetrecipesService } from 'src/app/services/getrecipes.service';
 
@@ -17,17 +16,16 @@ export class RecipesComponent implements OnInit {
     this.getrecipe.callRecipes()
       .subscribe(
         recipe => {
-          console.log(recipe)
           this.recipe = recipe
         }
     )
+    .unsubscribe
   }
 
   getRandomRecipe() {
     this.getrecipe.callRecipes()
       .subscribe(
         recipe => {
-          console.log(recipe)
           this.recipe = recipe
         })
   }

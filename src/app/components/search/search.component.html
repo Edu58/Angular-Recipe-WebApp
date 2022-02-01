@@ -1,0 +1,24 @@
+<section class="container">
+    <form (ngSubmit) = "searchInput()">
+        <div class="search d-flex justify-content-center my-3">
+            <div class="input-group input-group-lg w-50">
+                <input type="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="userInput" placeholder="Enter meal name" [(ngModel)] = "userInput">
+                <button type="submit" class="btn btn-md btn-success">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="reponse d-flex justify-content-center align-items-center flex-wrap" *ngIf="data">
+        <div class="card" *ngFor="let meal of data" style="width: 18rem; margin: 1rem;">
+            <img [src]="meal.strMealThumb" class="card-img-top" alt="recipe image">
+            <div class="card-body">
+                <h5>Meal: {{meal.strMeal}}</h5>
+                <h6>Origin: {{meal.strArea}}</h6>
+                <h6>Category: {{meal.strCategory}}</h6>
+                <div class="d-flex justify-content-center" id={{meal.idMeal}} style="margin-top: 1rem;" (click)="sendID($event)">
+                    <button mat-flat-button color="primary">Check Recipe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

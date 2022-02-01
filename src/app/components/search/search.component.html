@@ -14,8 +14,8 @@
             <div class="card-body">
                 <h5>Meal: {{meal.strMeal}}</h5>
                 <h6>Origin: {{meal.strArea}}</h6>
-                <h6>Category: {{meal.strCategory}} | {{meal.idMeal}}</h6>
-                <div class="d-flex justify-content-center" style="margin-top: 1rem;">
+                <h6>Category: {{meal.strCategory}}</h6>
+                <div class="d-flex justify-content-center" id={{meal.idMeal}} style="margin-top: 1rem;" (click)="sendID($event)">
                     <button mat-flat-button color="primary">Check Recipe</button>
                 </div>
             </div>

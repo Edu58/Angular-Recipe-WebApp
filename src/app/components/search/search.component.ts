@@ -11,6 +11,7 @@ export class SearchComponent implements OnInit {
 
   userInput: any;
   data: any = [];
+  id: any;
 
   constructor(private searchUserInput: GetsearchService, private response: GetsearchService, private getInfoById: GetbyidService) {}
 
@@ -21,7 +22,18 @@ export class SearchComponent implements OnInit {
     this.response.getResponse(this.userInput).subscribe(
       result => {
         this.data = result.meals
+        //console.log(this.data[0])
       }
     )
+  }
+
+  sendID($event: any) {
+    //this.id = $event.target.parentElement.parentElement.id
+
+    this.getInfoById.getById($event.target.parentElement.parentElement.id).subscribe(
+      response => console.log(response)
+    )
+    
+    //console.log($event.target.parentElement.parentElement.id)
   }
 }
